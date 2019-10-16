@@ -1,5 +1,5 @@
 - project:
-    name: flavium-zuul-conf
+    name: albinvass/flavium-zuul-conf
     check:
       jobs:
         - noop
