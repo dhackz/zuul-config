@@ -1,4 +1,4 @@
 - hosts: all
   roles:
-    - add-build-sshkey
-    - prepare-workspace
+    - role: add-build-sshkey
+    - role: prepare-workspace
