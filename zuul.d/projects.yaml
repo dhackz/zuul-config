@@ -1,5 +1,5 @@
 - project:
-    name: flavium-zuul-config
+    name: flavium-zuul-conf
     check:
       jobs:
         - noop
