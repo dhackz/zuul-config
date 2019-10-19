@@ -4,6 +4,9 @@
       Newly opened pull requests enter this pipeline to receive an
       initial verification.
     manager: independent
+    require:
+      github:
+        current-patchset: true
     trigger:
       github:
         - event: pull_request
@@ -14,6 +17,43 @@
         - event: pull_request
           action: comment
           comment: (?i)^\s*recheck\s*$
+    start:
+      github:
+        status: pending
+        comment: false
+    success:
+      github:
+        status: 'success' 
+      mysql:
+    failure:
+      github:
+        status: 'failure'
+      mysql:
+
+- pipeline:
+    name: gate
+    description: |
+      Changes that have been approved are enqueued in this pipeline,
+      and if they pass tests, will be merged.
+    manager: dependent
+    require:
+      github:
+        current-patchset: true
+        review:
+          - type: approved
+        status: dhackz-zuul:.*/check:success
+    trigger:
+      github:
+        - event: pull_request_review
+          action:
+            - submitted
+        - event: pull_request
+          action: status
+          status:
+            - dhackz-zuul:.*/check:success
+        - event: pull_request
+          action: comment
+          comment: (?i)^\s*regate\s*$
     start:
       github:
         status: pending
