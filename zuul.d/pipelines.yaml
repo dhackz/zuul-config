@@ -61,6 +61,7 @@
     success:
       github:
         status: 'success' 
+        merge: true
       mysql:
     failure:
       github:
