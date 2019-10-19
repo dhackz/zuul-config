@@ -41,7 +41,7 @@
         current-patchset: true
         review:
           - type: approved
-        status: dhackz-zuul:.*/check:success
+        status: dhackz-zuul\[bot\]:.*/check:success
     trigger:
       github:
         - event: pull_request_review
