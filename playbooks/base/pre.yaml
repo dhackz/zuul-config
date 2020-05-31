@@ -1,4 +1,9 @@
 - hosts: all
+  tasks:
+    - name: Install rsync
+      package:
+        name: rsync
+      become: true
   roles:
     - add-build-sshkey
     - start-zuul-console
