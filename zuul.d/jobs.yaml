@@ -31,7 +31,7 @@
       hostname: 3.125.206.5
       path: /usr/local/apache2/htdocs
       ssh_username: zuul
-      ssh_know_hosts: [3.125.206.5]:2222 ssh-ed25519 AAAAC3NzaC1lZDI1NTE5AAAAICkd2RCxQ09zChoHum9vPWFepUlI+Gy0VEnZN6ogE1Ry
+      ssh_know_hosts: "[3.125.206.5]:2222 ssh-ed25519 AAAAC3NzaC1lZDI1NTE5AAAAICkd2RCxQ09zChoHum9vPWFepUlI+Gy0VEnZN6ogE1Ry"
       ssh_private_key: !encrypted/pkcs1-oaep
         - qfRvB7z+gTKAJcLZb98JI+nuDJI+wpoew1OQQhvw6nxGfleRu5SdRaNYhmvbH2KF2tP0t
           BuEfpy1l/XhBz5Prpdk9TJXM1K7cndx3U7E2gVp1qIsuX1S3iXQrmjm4D2UBlX5tKkzk/
