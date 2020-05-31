@@ -1,4 +1,7 @@
 - hosts: all
   roles:
     - add-build-sshkey
-    - prepare-workspace
+    - prepare-workspace-git
+    - validate-host
+    - ensure-output-dirs
+    - log-inventory
