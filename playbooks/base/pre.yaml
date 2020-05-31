@@ -1,6 +1,7 @@
 - hosts: all
   roles:
     - add-build-sshkey
+    - start-zuul-console
     - prepare-workspace-git
     - validate-host
     - ensure-output-dirs
