@@ -67,3 +67,20 @@
       github:
         status: 'failure'
       mysql:
+
+- pipeline:
+    name: Post merge
+    description: |
+      Pipeline that runs after a pull request has been merged.
+    manager: serial
+    require:
+      github:
+        merged: true
+    trigger:
+      github:
+        - event: pull_request
+          action: closed
+    success:
+      mysql:
+    failure:
+      mysql:
