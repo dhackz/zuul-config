@@ -14,4 +14,4 @@
   roles:
     - role: upload-logs
       zuul_logserver_root: "{{ site_logs.path }}"
-      zuul_log_url: "http://3.125.206.5:8000"
+      zuul_log_url: "https://logs.dhackz.org"
