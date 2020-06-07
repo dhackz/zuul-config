@@ -69,7 +69,7 @@
       mysql:
 
 - pipeline:
-    name: Post merge
+    name: post-merge
     description: |
       Pipeline that runs after a pull request has been merged.
     manager: serial
