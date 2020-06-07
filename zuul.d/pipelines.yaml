@@ -84,3 +84,14 @@
       mysql:
     failure:
       mysql:
+
+- pipeline:
+    name: perodic-daily
+    manager: independent
+    trigger:
+      timer:
+        - time: 0 8 * * *
+    success:
+      mysql:
+    failure:
+      mysql:
